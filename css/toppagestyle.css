@@ -3,22 +3,27 @@
 html {
   font-size: 100%;
 }
+
 body {
   color: #333;
   font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
   letter-spacing: 0.1em;
 }
+
 a {
   color: #333;
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   vertical-align: bottom;
 }
+
 li {
   list-style: none;
 }
+
 p {
   display: block;
   margin-block-start: 1em;
@@ -26,31 +31,60 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-.container{
+
+.container {
   display: flex;
+  justify-content: space-between;
 }
 
-.headbox{
-  flex: 1; /* ボックスを均等に拡張 */
+.regist {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  align-self: flex-end;
+  margin-top: auto;
+  margin-bottom: 5px;
+  text-align: center; 
+}
+
+.regist a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 20px 60px;
+  font-size: 20px;
+  border: 2px solid #ff7f50;
+  border-radius: 10px;
+  color: #ff7f50;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.regist a:hover {
+  background-color: #cd6839;
+  color: #fff;
+}
+
+.headbox {
+  flex: 1;
   padding: 10px;
   margin: 5px;
 }
 
-.headtextbox{
-  flex: 0.25; 
+.headtextbox {
+  flex: 0.25;
   padding: 10px;
   margin: 5px;
 }
 
 .header-image {
-    max-width: 400px; 
-    height: auto;
-    margin: 10px;
-  }
+  max-width: 400px;
+  height: auto;
+  margin: 10px;
+}
 
-.hbtn{
+.hbtn {
   background-color: #ff2a2a;
-  /* 文字の下に影をつけてボタンに立体感を出す */
   border-bottom: 6px solid hsl(0, 78%, 46%);
   border-radius: 10px;
   color: #fff;
@@ -66,11 +100,10 @@ p {
 #mainvisual {
   height: 720px;
   position: relative;
-  margin-bottom: 120px;
+  margin-bottom: 50px;
   overflow: hidden;
   background: url('img/mainvisual1.jpg') center center/cover no-repeat;
 }
-
 
 #mainvisual::before {
   content: "";
@@ -79,27 +112,17 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.4);
+  background: 	rgba(68, 72, 82, 0.062);
   z-index: 5;
 }
-/*
-背景でタイトルが見えずらいから少し透明にする 
-*/
 
-
-/*
-テキストとボタンが画像の上に表示されるように「z-index」を設定
-*/
 #mainvisual .text {
   position: absolute;
-  top: 5%;
-  left:  5%;
+  top: 20%;
+  left: 5%;
   z-index: 10;
 }
-/*
-「text-shadow」で文字の輪郭に白い影をつけることで、
-文字が背景画像に埋もれないようにする
-*/
+
 #mainvisual .text .title {
   font-size: 2.875rem;
   font-weight: bold;
@@ -107,10 +130,10 @@ p {
   text-shadow: 0 4px 6px #fff;
   z-index: 20;
 }
+
 #mainvisual .text .btn {
-  background-color: #2ac3ff;
-  /* 文字の下に影をつけてボタンに立体感を出す */
-  border-bottom: 6px solid hsl(229, 100%, 55%);
+  background-color: #5a8b6a;
+  border-bottom: 6px solid hsl(229, 29%, 25%);
   border-radius: 10px;
   color: #fff;
   font-size: 1.5rem;
@@ -120,22 +143,11 @@ p {
   transition: 0.3s;
   position: relative;
   margin-bottom: 10px;
-
-  margin-left: 0;
-  margin-right: auto;
+  margin-left: 5px;
+  margin-right: 100px;
+  width: 500px;
 }
-/* 
-#mainvisual .text #regist {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-} */
-/*
-ボタンの右矢印
-上と右にボーダーを設定し、「transform: rotate(45deg)」で
-45度回転させることで矢印を作成
-positionで位置を調整するd
-*/
+
 #mainvisual .text .btn::after {
   content: "";
   width: 16px;
@@ -147,62 +159,26 @@ positionで位置を調整するd
   top: 26px;
   right: 30px;
 }
-/*
-ホバー時は、opacityで透過させながら「transform: scale(1.05);」で
-少しだけボタンのサイズを大きくする
-*/
+
 #mainvisual .text .btn:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
-/*
-メインビジュアル
-animationを使用して、画像をフェードイン、フェードアウトで切り替えを行う
-*/
+
 #mainvisual .fade li {
   width: 75%;
   position: absolute;
   top: 0;
   right: 0;
-  /* 最初は3枚の画像を非表示にしておく */
-  opacity: 0;
-  /*
-  アニメーションを実行
-  fade：下で定義している「@keyframes fade」を実行
-  15s：「@keyframes fade」の処理を15秒かけて実行
-  infinite：アニメーションの処理を無限に繰り返す
-  */
-  animation: fade 15s infinite;
+  opacity: 1;
 }
-/*
-1枚目の画像のアニメーション実行タイミングを設定
-「animation-delay: 0s;」ですぐに実行
-*/
-#mainvisual .fade li:nth-child(1) {
-  animation-delay: 0s;
-}
-/*
-2枚目の画像のアニメーション実行タイミングを設定
-「animation-delay: 5s;」で5秒後に実行
-*/
-#mainvisual .fade li:nth-child(2) {
-  animation-delay: 5s;
-}
-/*
-3枚目の画像のアニメーション実行タイミングを設定
-「animation-delay: 10s;」で10秒後に実行
-*/
-#mainvisual .fade li:nth-child(3) {
-  animation-delay: 10s;
-}
+
 #mainvisual .fade li img {
   width: 100%;
-  height: 720px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
 }
-/*
-「box-shadow」で画像のまわりをぼかす
-*/
+
 #mainvisual .fade li::after {
   content: "";
   position: absolute;
@@ -212,40 +188,31 @@ animationを使用して、画像をフェードイン、フェードアウト�
   right: 0;
   box-shadow: inset 0px 0px 20px 20px #fff;
 }
-/*
-アニメーション処理
-上の「animation」で15sを指定しているので下記の処理を15秒かけて実行
-0%が0秒を表し、100%が15秒後を表す。
 
-0%の「opacity: 0;」で非表示の状態からスタートし、
-15%になるまでの間に少しづつ画像を表示（フェードイン）させる。
-そこから30%の時点までは画像を表示させたままの状態を維持し、
-45%の時点に向けて画像を非表示（フェードアウト）する。
-そこから100%まで非表示の状態を維持する。
-*/
 @keyframes fade {
   0% {
-    opacity: 0;
-  }
-  15% {
     opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
-
-/*-------------------------------------------
-space
--------------------------------------------*/
 @media screen and (max-width: 900px) {
+  .regist {
+    flex-direction: row; /* 縦向きから横向きに変更 */
+  }
+
+  .regist a {
+    width: auto; /* ボタンを100%の幅に設定して、縦に並ぶようにします */
+    display: block; /* インライン要素からブロック要素に変更 */
+    margin: 10px 0; /* 余白の調整（必要に応じて変更） */
+    font-size: 18px;
+    padding: 15px 50px;
+  }
+  /*  */
+  
+
   .wrapper {
     padding: 0 16px;
   }
@@ -255,11 +222,9 @@ space
   }
   .section-title::after {
     width: 80px;
+    right: 5px;
   }
 
-  /*-------------------------------------------
-  Mainvisual
-  -------------------------------------------*/
   #mainvisual {
     height: 490px;
     margin-bottom: 80px;
@@ -271,10 +236,11 @@ space
     height: 300px;
   }
   #mainvisual .text {
-    /* 両端に16pxづつ余白を作る */
-    width: calc(100% - 32px);
-    top: 310px;
-    left: 16px;
+    width: calc(100% - 10px);
+    top: 100px;
+    left: 20px;
+    z-index: 10;
+    width: 90%;
   }
   #mainvisual .text .title {
     font-size: 1.75rem;
@@ -282,17 +248,21 @@ space
   }
   #mainvisual .text .btn {
     width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: none;
+    margin: 10px 0;
   }
 }
-  /*-------------------------------------------
-  フッター
-  -------------------------------------------*/
-  #footer {
-    background-color: #dbdbdb;
-    text-align: right;
-    padding: 5px;
-  }
-  
-  #footer p {
-    margin: 0 10px;
-  }
+
+#footer {
+  background-color: #dbdbdb;
+  text-align: right;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#footer p {
+  margin: 0 10px;
+}
+
