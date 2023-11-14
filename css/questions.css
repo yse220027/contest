@@ -1,0 +1,67 @@
+/* スタイルのリセット（オプション） */
+body, h1, h2, p, ul, li, span {
+    margin: 0;
+    padding: 0;
+}
+
+/* 全体のスタイル */
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #fff;
+    margin: 40px;
+    padding: auto;
+    /* padding-top: 20px;
+    padding-left: 200px;
+    padding-right: 200px; */
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #97cdf3;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* タイトルのスタイル */
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* 箱のスタイル */
+section {
+    background-color: #e6f0f0;
+    border: 1px solid #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* QRのスタイル */
+.image-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.image-title {
+    font-size: 14px;
+}

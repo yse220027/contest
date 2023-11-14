@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>会議作成画面</title>
+    <meta name="description" content="会議作成画面 テスト段階です">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/mtgformstyle2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="./top.html">Top</a>
+    </header>
+    <div class="content">
+      <h1 class="page-title">会議を作成する</h1>
+      <form action="./mtgform.php" method="POST">
+        <dl class="form-area">
+          <dt><label for="name">主催者名</label><span>必須</span></dt>
+          <dd>
+            <input type="text" id="name" name="your-name" placeholder="山田 次郎">
+            <p id="name-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="mtgname">会議名</label><span>必須</span></dt>
+          <dd>
+            <input type="text" id="mtgname" name="mtg-name" placeholder="第三回商品企画会議">
+            <p id="mtgname-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="venuename">会場名</label><span>必須</span></dt>
+          <dd>
+            <input type="text" id="venuename" name="venue-name" placeholder="〇〇〇社第一会議室">
+            <p id="venue-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="reservation">予約日</label><span>必須</span></dt>
+          <dd>
+            <input type="text" id="reservation" name="your-reservation">
+            <p id="reservation-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="start-time">開始時間</label><span>必須</span></dt>
+          <dd>
+            <input type="time" id="start-time" name="start-time">
+            <p id="start-time-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="end-time">終了時間</label><span>必須</span></dt>
+          <dd>
+            <input type="time" id="end-time" name="end-time">
+            <p id="end-time-error" class="error-text"></p>
+          </dd>
+
+          <!-- <dt>開催形式<span>必須</span></dt>
+          <dd>
+            <input type="radio" id="online" class="lesson" name="your-lesson" value="online" checked>
+            <label for="online">オンライン参加可能</label><br>
+            <input type="radio" id="venue" class="lesson" name="your-lesson" value="venue">
+            <label for="venue">現地のみでの開催</label>
+            <p id="lesson-error" class="error-text"></p>
+          </dd> -->
+        </dl>
+
+        <!-- <div class="note-online">
+          <p>
+            オンラインでの参加の場合の注意をここに書く
+          </p>
+        </div>
+
+        <div class="note-venue">
+          <p>
+            現地会場参加の場合の注意をこちらに。
+          </p>
+        </div> -->
+
+        <div class="button-area">
+          <button id="submit-button" type="submit" value="">上記の内容で会議を作成</button>
+        </div>
+      </form>
+      <script src="js/mtgform3.js"></script>
+    </div>
+    
+  </body>
+</html>

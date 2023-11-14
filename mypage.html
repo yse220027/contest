@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイページ</title>
+    <link rel="stylesheet" href="css/mypage.css">
+</head>
+<body>
+
+    <h1>マイページ</h1>
+
+    <!-- 自己情報編集ボタン -->
+    <button class="my-button" onclick="editProfile()">自己情報編集</button>
+
+    <!-- 作成した会議一覧ボタン -->
+    <button class="mypage-button" onclick="viewMeetings()">作成した会議の一覧</button>
+
+    <!-- スケジュールボタン -->
+    <button class="mypage-button" onclick="viewSchedule()">スケジュールを確認</button>
+
+    <!-- 質問にメールで回答ボタン -->
+    <button class="mypage-button" onclick="emailForAnswers()">質問にメールで回答</button>
+
+
+    <!-- JavaScriptで各ボタンの処理を実装 -->
+    <script>
+        // 自己情報編集ボタンがクリックされたときの処理
+        function editProfile() {
+            alert("自己情報編集ボタンがクリックされました。");
+        }
+
+        // 作成した会議一覧ボタンがクリックされたときの処理
+        function viewMeetings() {
+            alert("作成した会議一覧ボタンがクリックされました。");
+        }
+
+        // スケジュールボタンがクリックされたときの処理
+        function viewSchedule() {
+            alert("スケジュールボタンがクリックされました。");
+        }
+
+        // 質問にメールで回答ボタンがクリックされたときの処理
+        function emailForAnswers() {
+            alert("質問にメールで回答ボタンがクリックされました。");
+        }
+    </script>
+
+</body>
+</html>

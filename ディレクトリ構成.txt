@@ -1,0 +1,36 @@
+"C:\xampp\htdocs"
+ ├─img
+ │  ├─logo-sp.png
+ │  ├─mainvisual1.jpg
+ │  ├─mainvisual2.jpg
+ │  ├─mainvisual3.jpg
+ │  ├─module_table_bottom.jpg
+ │  ├─module_table_top.jpg
+ │  ├─qrcode.png（主催者用QR
+ │  └─qrcode2.png（参加者用QR
+ │
+ ├─css
+ |  ├─formstyle.css（質問フォームcss
+ |  ├─mtgformstyle.css（会議作成フォームcss
+ |  ├─mtgformstyle.css（会議情報css
+ |  ├─questions.css（会議への質問一覧フォームcss
+ │  └─toppagestyle.css
+ │
+ ├─js
+ │  ├─form.js（質問フォームjs
+ │  └─mtgform2.js（会議作成フォームjs
+ │
+ |
+ ├─phpqrcode(QR用のライブラリとか※触らない)
+ |
+ ├─form.html（質問を作成する
+ ├─mtgform2.html（会議を作成する
+ ├─top.html
+ |
+ ├─get-meeting.php（会議情報ページphp
+ ├─get-questions.php（会議への質問一覧ページphp
+ ├─mtgform.php（会議作成フォームphp
+ ├─mtgpage.php（会議情報ページphpとhtml
+ ├─questions.php（会議への質問一覧ページphpとhtml
+ └─process.php（質問フォーム送信リダイレクト用
+    

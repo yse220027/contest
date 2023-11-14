@@ -1,0 +1,72 @@
+/* mypage.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding-top: 100px;
+}
+
+.my-button {
+    margin: 10px 20px 10px 10px; /* 修正されたスタイル */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.mypage-button {
+    margin-top: 10px; /* 上のマージン */
+    margin-bottom: 10px; /* 下のマージン */
+    margin-left: 0; /* 左のマージン */
+    margin-right: 10px; /* 右のマージン */
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+}
+
+.edit-profile-btn {
+    margin-top: 10px; /* 上のマージン */
+    margin-bottom: 10px; /* 下のマージン */
+    margin-left: 0; /* 左のマージン */
+    margin-right: 0; /* 右のマージン */
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+}
+
+.edit-profile-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+    background-color: #45a049;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>テスト質問フォーム</title>
+    <meta name="description" content="これはテストフォームです">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/formstyle.css">
+  </head>
+
+  <body>
+    <header>
+      <a href="./top.html">Top</a>
+    </header>
+    <div class="content">
+      <h1 class="page-title">会議 質問フォーム</h1>
+      <form action="./process.php" method="POST">
+        <dl class="form-area">
+          <dt><label for="name">名前</label><span>必須</span></dt>
+          <dd>
+            <input type="text" id="name" name="your-name" placeholder="山田 次郎">
+            <p id="name-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="mtgid">会議ID</label><span>必須</span></dt>
+          <dd>
+            <input type="text" id="mtgid" name="mtg-id" placeholder="0001">
+            <p id="mtgid-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="email">メールアドレス</label><span2>任意</span2></dt>
+          <dd>
+            <input type="email" id="email" name="your-email" placeholder="ABC＠EFG.HIJ">
+            <p id="email-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="tel1">電話番号</label><span2>任意</span2></dt>
+          <dd>
+            <input type="text" id="tel1" name="your-tel1" placeholder="〇〇〇"> -
+            <input type="text" id="tel2" name="your-tel2" placeholder="〇〇〇〇"> -
+            <input type="text" id="tel3" name="your-tel3" placeholder="〇〇〇〇">
+            <p id="tel-error" class="error-text"></p>
+          </dd>
+
+          <dt>今回の参加形式<span>必須</span></dt>
+          <dd>
+            <input type="radio" id="online" class="lesson" name="your-lesson" value="online" checked>
+            <label for="online">オンライン</label><br>
+            <input type="radio" id="venue" class="lesson" name="your-lesson" value="venue">
+            <label for="venue">会場</label>
+            <p id="lesson-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="name">質問</label><span>必須</span></dt>
+          <dd>
+            <input type="radio" id="technical" class="" name="questiontype" value="technical" checked>
+            <label for="technical">技術関連</label>
+            <input type="radio" id="financial" class="" name="questiontype" value="financial">
+            <label for="financial">予算関連</label>
+            <input type="radio" id="other" class="" name="questiontype" value="other">
+            <label for="other">その他</label>
+            <textarea id="question" name="question" placeholder="料金プランは何種類ありますか？"></textarea>
+            <p id="question-error" class="error-text"></p>
+          </dd>
+
+        </dl>
+
+        <div class="note-online">
+          <p>
+            オンラインでの参加の場合の注意をここに書く
+          </p>
+        </div>
+
+        <div class="note-venue">
+          <p>
+            現地会場参加の場合の注意をこちらに。
+          </p>
+        </div>
+
+        <div class="button-area">
+          <button id="submit-button" type="submit" value="">上記の内容で送信する</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>
+
+
