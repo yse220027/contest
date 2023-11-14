@@ -1,6 +1,8 @@
 <?php
 // get-meeting.php
 
+/* 変更した */
+
 function getMeetingInfo($mtgId) {
     // データベース接続情報
     $dbHost = "127.0.0.1";
